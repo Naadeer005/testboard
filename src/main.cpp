@@ -2,7 +2,7 @@
 
 const int CS  = 2;
 const int SCLK = 3;
-const int MOSI = 4;
+const int key = 4;
 const int CLK = 8;
 
 void setup() {
@@ -10,7 +10,7 @@ void setup() {
 
   pinMode(CS, OUTPUT);
   pinMode(SCLK, OUTPUT);
-  pinMode(MOSI, OUTPUT);
+  pinMode(key, OUTPUT);
   pinMode(CLK, OUTPUT);
   Serial.println("Enter 3 bits, example: 101");
 }
@@ -25,7 +25,7 @@ void loop() {
 
       digitalWrite(CS, input[0] == '1' ? HIGH : LOW);
       digitalWrite(SCLK, input[1] == '1' ? HIGH : LOW);
-      digitalWrite(MOSI, input[2] == '1' ? HIGH : LOW);
+      digitalWrite(key, input[2] == '1' ? HIGH : LOW);
 
       Serial.print("CS = ");
       Serial.println(input[0]);
@@ -47,7 +47,7 @@ void loop() {
 
       digitalWrite(CS, input[0] == '1' ? HIGH : LOW);
       digitalWrite(SCLK, input[1] == '1' ? HIGH : LOW);
-      digitalWrite(MOSI, input[2] == '1' ? HIGH : LOW);
+      digitalWrite(key, input[2] == '1' ? HIGH : LOW);
 
       Serial.print("CS = ");
       Serial.println(input[0]);
@@ -55,7 +55,7 @@ void loop() {
       Serial.print("SCLK = ");
       Serial.println(input[1]);
 
-      Serial.print("MOSI = ");
+      Serial.print("key = ");
       Serial.println(input[2]);
       digitalWrite(CLK, '1');
       delay(250);
