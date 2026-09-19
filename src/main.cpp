@@ -12,7 +12,7 @@ void setup() {
   pinMode(SCLK, OUTPUT);
   pinMode(key, OUTPUT);
   pinMode(CLK, OUTPUT);
-  Serial.println("Enter 3 bits, example: 101");
+  Serial.println("Enter 1,3,4 bits");
 }
 
 void loop() {
@@ -33,7 +33,7 @@ void loop() {
       Serial.print("SCLK = ");
       Serial.println(input[1]);
 
-      Serial.print("MOSI = ");
+      Serial.print("key = ");
       Serial.println(input[2]);
 
     }
